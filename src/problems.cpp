@@ -73,7 +73,7 @@ std::string balancedNum(unsigned long long int number)
   }
   else {
     size_t m1, m2;
-    m = length/2;
+    size_t m = length/2;
 
     size_t m = length/2;
     for (size_t i = 0; i < m-1; i++) {
