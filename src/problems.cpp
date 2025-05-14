@@ -42,6 +42,58 @@
 std::string balancedNum(unsigned long long int number)
 {
   // your code here
+  unsigned long long int n = number/10;
+  size_t lenght = 1;
+  unsigned int sx = 0;
+  unsigned int dx = 0;
+  std::vector<int> v;
+  v.emplace_back(number%10);
+
+
+  while (n > 1){
+    lenght++;
+    v.emplace_back(n%10);
+    n = n/10;
+  }
+
+  if(number%2 == 0) {
+    size_t m = lenght/2;
+    for (size_t i = 0; i < m; i++) {
+      sx += v[i];
+    }
+
+    for (size_t i = m+1; i < lenght; i++) {
+      dx += v[i];
+    }
+
+    if(sx == dx)
+      return "Balanced";
+    else
+      return "Not Balanced";
+  }
+  else {
+    size_t m1, m2;
+    m1 = lenght/2 - 1;
+    m2 = lenght/2;
+
+    size_t m = lenght/2;
+    for (size_t i = 0; i < m1; i++) {
+      sx += v[i];
+    }
+
+    for (size_t i = m2+1; i < lenght; i++) {
+      dx += v[i];
+    }
+
+    if(sx == dx)
+      return "Balanced";
+    else
+      return "Not Balanced";
+  }
+
+
+  
+  
   return "";
 }
 
