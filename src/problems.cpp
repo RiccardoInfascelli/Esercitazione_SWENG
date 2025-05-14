@@ -73,15 +73,14 @@ std::string balancedNum(unsigned long long int number)
   }
   else {
     size_t m1, m2;
-    m1 = length/2 - 1;
-    m2 = length/2;
+    m = length/2;
 
     size_t m = length/2;
-    for (size_t i = 0; i < m1; i++) {
+    for (size_t i = 0; i < m-1; i++) {
       sx += v[i];
     }
 
-    for (size_t i = m2+1; i < length; i++) {
+    for (size_t i = m2+1; m+1 < length; i++) {
       dx += v[i];
     }
 
