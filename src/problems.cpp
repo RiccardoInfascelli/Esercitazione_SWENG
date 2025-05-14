@@ -56,7 +56,7 @@ std::string balancedNum(unsigned long long int number)
     n = n/10;
   }
 
-  if(length%2 == 0) {
+  if(length%2 == 1) {
     size_t m = length/2;
     for (size_t i = 0; i < m; i++) {
       sx += v[i];
